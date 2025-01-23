@@ -14,8 +14,10 @@ setup(
     author_email='matthijs.gielen@fox-it.com',
     url='https://github.com/fox-it/bloodhound-import',
     packages=['bloodhound_import'],
+    package_dir={'bloodhound_import': 'bloodhound_import'},
+    py_modules=['bloodhound_import.__main__'],
     install_requires=['neo4j-driver', 'ijson'],
     entry_points={
-        'console_scripts': ['bloodhound-import=bloodhound_import:__main__']
+        'console_scripts': ['bloodhound-import=bloodhound_import.__main__:main']
     }
 )
